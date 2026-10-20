@@ -26,6 +26,7 @@ Leia os arquivos de `referencias/` antes de escrever. Cada um cobre uma parte e 
 | `referencias/formatos.md` | Modelos de roteiro de vídeo, carrossel e legenda | Ao montar a entrega |
 | `referencias/identidade-visual.md` | Cores, fontes, estrutura do slide, elementos 3D | Carrossel visual |
 | `referencias/banco-de-pautas.md` | Pautas prioritárias e banco geral | Modo semana e quando faltar tema |
+| `referencias/problemas-e-solucoes.md` | Problemas reais que se repetem nos escritórios, o que o Well vê por trás e como resolve, com ganchos | Sempre que for propor pauta ou montar o corpo de um post |
 | `biblioteca/publicados/` | Carrosséis e vídeos já publicados, com resultado | Antes de propor pauta (não repetir) e para partir do que funcionou |
 
 ## 2. Modo "semana"

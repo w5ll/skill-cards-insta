@@ -4,6 +4,8 @@
 
 A melhor fonte de pauta são as observações do próprio Well (áudios e anotações do dia a dia) e os aprendizados do cérebro da Arven, sempre reescritos com estratégia própria e no tom dele.
 
+O banco mais rico está em `referencias/problemas-e-solucoes.md`: 26 problemas reais com o que o Well vê por trás, como resolve e ganchos prontos. Puxe de lá antes de inventar pauta nova.
+
 **Prioridade:**
 - Seu anúncio pode estar aprendendo a trazer curioso (só o lead qualificado deve voltar pro Meta como conversão).
 - Custo por lead bom com custo por lead qualificado ruim: é lead errado, não lead caro.
