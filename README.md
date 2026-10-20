@@ -11,6 +11,7 @@ Lente de tudo: **"Do clique ao contrato."** Eu mostro onde o escritório perde c
 3. Entrega pauta, gancho (3 opções), roteiro, copy do carrossel slide a slide e legenda.
 4. Você aprova a copy.
 5. Ela gera os slides em PNG (1080 x 1350) com a identidade escura e os elementos 3D.
+6. Com o seu "pode postar", publica o carrossel direto no Instagram pela API oficial.
 
 ## Estrutura (onde editar cada coisa)
 
@@ -29,6 +30,7 @@ skill/conteudo-well-advogados/      ← a skill (é isso que vira o arquivo .ski
   assets/foto-well.jpg              sua foto (coloque aqui, quadrada)
   templates/carrossel.html          layout dos slides e desenho dos elementos 3D
   scripts/renderizar.mjs            gera os PNGs a partir de um .json
+  scripts/publicar.mjs              publica o carrossel no Instagram
   exemplos/                         carrossel modelo + catálogo dos elementos 3D
   biblioteca/publicados/            ficha de cada post publicado, com resultado
 material-bruto/                     material cru (áudios, prints, referências). Não vai na skill
@@ -52,6 +54,20 @@ Exemplo de carrossel completo: `skill/conteudo-well-advogados/exemplos/MODELO_LE
 npm install                                         # uma vez (instala o Playwright)
 node skill/conteudo-well-advogados/scripts/renderizar.mjs caminho/CARROSSEL.json
 ```
+
+## Publicando no Instagram
+
+Precisa do token da API do Instagram (app "well-avn - IG" no Meta for Developers, login empresarial do Instagram) na variável de ambiente `IG_ACCESS_TOKEN`. Nunca coloque o token no repositório.
+
+```bash
+node skill/conteudo-well-advogados/scripts/publicar.mjs --verificar               # confere o token
+node skill/conteudo-well-advogados/scripts/publicar.mjs saida/.../CARROSSEL.json  # converte pra JPG e testa
+git add -A && git commit -m "carrossel X" && git push                             # as imagens precisam estar no GitHub
+node skill/conteudo-well-advogados/scripts/publicar.mjs saida/.../CARROSSEL.json --confirmar
+node skill/conteudo-well-advogados/scripts/publicar.mjs --renovar                 # token novo a cada 60 dias
+```
+
+As imagens são servidas pelo link público do GitHub. Se o repositório virar privado, a publicação precisa de outra hospedagem.
 
 ## Empacotando a skill para o Claude.ai
 

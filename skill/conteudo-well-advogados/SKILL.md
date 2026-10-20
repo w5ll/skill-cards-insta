@@ -63,7 +63,19 @@ Depois que o Well aprovar a copy slide a slide:
 
 As cores, fontes e textos fixos (@, nome, rodapé) ficam em `marca.json`. Trocar ali muda todos os carrosséis.
 
-## 4. Checklist antes de entregar
+## 4. Publicar no Instagram
+
+Só publique quando o Well disser explicitamente que pode postar ("pode postar", "publica"). Aprovar a copy ou a arte não é autorização para publicar.
+
+1. A legenda vai no campo `"legenda"` do `.json` ou num arquivo `NOME.legenda.txt` ao lado (máximo 2.200 caracteres).
+2. Rode `node scripts/publicar.mjs caminho/CARROSSEL.json`. Ele converte os PNGs para JPG.
+3. Faça commit e push dos JPGs (as imagens precisam de link público, e o GitHub serve de hospedagem).
+4. Rode de novo sem `--confirmar`: é o teste, mostra conta, número de slides e legenda. Mostre ao Well.
+5. Com o OK dele, rode com `--confirmar`. O script devolve o link do post. Crie a ficha em `biblioteca/publicados/`.
+
+Outros comandos: `--verificar` (confere se o token funciona) e `--renovar` (token novo, vale 60 dias; o Well troca nas configurações do ambiente). O token fica na variável de ambiente `IG_ACCESS_TOKEN`, nunca no repositório nem no chat.
+
+## 5. Checklist antes de entregar
 
 - [ ] O gancho para o dedo em até 3 segundos e fala com o advogado.
 - [ ] Está no tom do Well, mas a ideia e a estrutura são estratégicas, não cópia das falas dele.

@@ -5,6 +5,6 @@ cd "$(dirname "$0")"
 mkdir -p dist
 rm -f dist/conteudo-well-advogados.skill
 cd skill
-zip -rq ../dist/conteudo-well-advogados.skill conteudo-well-advogados -x '*/.gitkeep' '*.render.html' '*/node_modules/*'
+zip -rq ../dist/conteudo-well-advogados.skill conteudo-well-advogados -x '*/.gitkeep' '*.render.html' '*/node_modules/*' '*/exemplos/*.jpg'
 cd ..
 echo "ok  dist/conteudo-well-advogados.skill ($(du -h dist/conteudo-well-advogados.skill | cut -f1))"
