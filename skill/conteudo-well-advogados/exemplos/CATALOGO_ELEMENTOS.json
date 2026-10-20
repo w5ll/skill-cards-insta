@@ -1,0 +1,101 @@
+{
+  "tema": "Catálogo dos elementos 3D",
+  "slides": [
+    {
+      "layout": "ponto",
+      "elemento": "esfera",
+      "textos": {
+        "titulo": "Elemento: *esfera*",
+        "apoio": "Use \"elemento\": \"esfera\" no slide."
+      }
+    },
+    {
+      "layout": "ponto",
+      "elemento": "anel",
+      "textos": {
+        "titulo": "Elemento: *anel*",
+        "apoio": "Use \"elemento\": \"anel\" no slide."
+      }
+    },
+    {
+      "layout": "ponto",
+      "elemento": "cubo",
+      "textos": {
+        "titulo": "Elemento: *cubo*",
+        "apoio": "Use \"elemento\": \"cubo\" no slide."
+      }
+    },
+    {
+      "layout": "ponto",
+      "elemento": "cristal",
+      "textos": {
+        "titulo": "Elemento: *cristal*",
+        "apoio": "Use \"elemento\": \"cristal\" no slide."
+      }
+    },
+    {
+      "layout": "ponto",
+      "elemento": "mensagem",
+      "textos": {
+        "titulo": "Elemento: *mensagem*",
+        "apoio": "Use \"elemento\": \"mensagem\" no slide."
+      }
+    },
+    {
+      "layout": "ponto",
+      "elemento": "funil",
+      "textos": {
+        "titulo": "Elemento: *funil*",
+        "apoio": "Use \"elemento\": \"funil\" no slide."
+      }
+    },
+    {
+      "layout": "ponto",
+      "elemento": "relogio",
+      "textos": {
+        "titulo": "Elemento: *relogio*",
+        "apoio": "Use \"elemento\": \"relogio\" no slide."
+      }
+    },
+    {
+      "layout": "ponto",
+      "elemento": "grafico",
+      "textos": {
+        "titulo": "Elemento: *grafico*",
+        "apoio": "Use \"elemento\": \"grafico\" no slide."
+      }
+    },
+    {
+      "layout": "ponto",
+      "elemento": "alvo",
+      "textos": {
+        "titulo": "Elemento: *alvo*",
+        "apoio": "Use \"elemento\": \"alvo\" no slide."
+      }
+    },
+    {
+      "layout": "ponto",
+      "elemento": "cadeado",
+      "textos": {
+        "titulo": "Elemento: *cadeado*",
+        "apoio": "Use \"elemento\": \"cadeado\" no slide."
+      }
+    },
+    {
+      "layout": "ponto",
+      "elemento": "lupa",
+      "textos": {
+        "titulo": "Elemento: *lupa*",
+        "apoio": "Use \"elemento\": \"lupa\" no slide."
+      }
+    },
+    {
+      "layout": "ponto",
+      "elemento": "furo",
+      "textos": {
+        "titulo": "Elemento: *furo*",
+        "apoio": "Use \"elemento\": \"furo\" no slide."
+      }
+    }
+  ]
+}

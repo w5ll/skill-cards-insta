@@ -1,0 +1,4 @@
+node_modules/
+dist/
+*.render.html
+.DS_Store

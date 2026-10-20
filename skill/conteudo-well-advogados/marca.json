@@ -1,0 +1,29 @@
+{
+  "arroba": "@lunardiwell",
+  "nome": "Well | Marketing jurídico",
+  "foto": "assets/foto-well.jpg",
+  "cores": {
+    "fundo": "#16161f",
+    "fundo_profundo": "#0a0a12",
+    "cartao": "#1a1a24",
+    "linha": "#333446",
+    "elemento_3d": "#7f8caa",
+    "destaque": "#a8b4d4",
+    "texto": "#eaefef",
+    "apoio": "#b4bccd",
+    "rotulo": "#8f97ab"
+  },
+  "fontes": {
+    "titulo": { "familia": "Sora", "peso": 800 },
+    "texto": { "familia": "Manrope", "peso": 500 }
+  },
+  "tamanhos": {
+    "titulo_capa": 94,
+    "titulo": 80,
+    "apoio": 35
+  },
+  "textos_fixos": {
+    "arraste": "Arraste",
+    "final_chamada_padrao": "Salva e manda pro seu sócio"
+  }
+}

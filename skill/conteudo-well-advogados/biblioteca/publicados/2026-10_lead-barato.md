@@ -1,0 +1,11 @@
+# 2026-10_lead-barato
+- Formato: carrossel
+- Pilar: Tráfego pago sem mito
+- Gancho usado: "Lead barato é o lead mais caro que existe."
+- Referência visual: https://claude.ai/artifact/UQ98j7EQDBiwecddRuqyvE
+- Alcance:
+- Salvamentos:
+- Compartilhamentos:
+- Comentários:
+- Seguidores ganhos:
+- Por que funcionou / por que não funcionou:

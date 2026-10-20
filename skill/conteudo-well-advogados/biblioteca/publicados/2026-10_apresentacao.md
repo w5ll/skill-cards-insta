@@ -1,0 +1,11 @@
+# 2026-10_apresentacao
+- Formato: carrossel
+- Pilar: Bastidores e opinião (apresentação do perfil)
+- Gancho usado: "Seu escritório não tem problema de anúncio."
+- Referência visual: https://claude.ai/artifact/BVA1zphNs92oMnEM8w8Thu
+- Alcance:
+- Salvamentos:
+- Compartilhamentos:
+- Comentários:
+- Seguidores ganhos:
+- Por que funcionou / por que não funcionou:

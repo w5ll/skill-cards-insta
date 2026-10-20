@@ -1,0 +1,13 @@
+{
+  "name": "conteudo-well-advogados",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "renderizar": "node skill/conteudo-well-advogados/scripts/renderizar.mjs",
+    "exemplos": "node skill/conteudo-well-advogados/scripts/renderizar.mjs skill/conteudo-well-advogados/exemplos/MODELO_LEAD_BARATO.json",
+    "empacotar": "./empacotar.sh"
+  },
+  "devDependencies": {
+    "playwright": "1.56.1"
+  }
+}

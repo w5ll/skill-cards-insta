@@ -1,0 +1,35 @@
+{
+  "tema": "Lead barato é o lead mais caro",
+  "pilar": "Tráfego pago sem mito",
+  "slides": [
+    { "layout": "capa", "foto": false, "elemento": "anel", "textos": {
+      "rotulo": "Tráfego pago sem mito",
+      "titulo": "Lead barato é o lead *mais caro* que existe",
+      "apoio": "E o painel do anúncio não te mostra isso." } },
+    { "layout": "ponto", "elemento": "grafico", "textos": {
+      "titulo": "O custo por lead *engana*",
+      "apoio": "Custo por lead (CPL) é quanto você paga por cada contato. Ele diz quantos chegaram. Não diz quantos tinham caso." } },
+    { "layout": "conversa", "textos": {
+      "contato": "Lead do anúncio",
+      "conversa": [
+        { "de": "lead", "texto": "Oi, quanto custa uma consulta?", "hora": "19:02" },
+        { "pausa": "dia seguinte" },
+        { "de": "escritorio", "texto": "Bom dia! Qual seria o seu caso?", "hora": "10:14" },
+        { "de": "lead", "texto": "Era só uma dúvida mesmo", "hora": "10:40" }
+      ],
+      "titulo": "Barato pra *chegar*. Caro pra atender." } },
+    { "layout": "numero", "textos": {
+      "numero": "R$ 80",
+      "numero_legenda": "por lead, contra R$ 50 antes",
+      "titulo": "Piorou o número. *Melhorou* o contrato." } },
+    { "layout": "lista", "textos": {
+      "titulo": "O que olhar no lugar",
+      "itens": [ "Quantos leads *tinham caso*", "Quantos viraram *reunião*", "Quanto custou cada *contrato*" ] } },
+    { "layout": "ponto", "elemento": "furo", "textos": {
+      "titulo": "O furo não está no *anúncio*",
+      "apoio": "Está no caminho entre o clique e o contrato." } },
+    { "layout": "final", "textos": {
+      "titulo": "Salva e manda pro seu *sócio*",
+      "apoio": "Toda semana eu mostro onde o escritório perde cliente entre o anúncio e o contrato." } }
+  ]
+}

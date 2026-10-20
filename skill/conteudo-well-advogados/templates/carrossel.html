@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Slide</title>
+<!--FONTES-->
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #000; }
+
+  /* ---------- Base do slide ---------- */
+  .slide {
+    position: relative; overflow: hidden;
+    width: 1080px; height: 1350px;
+    padding: 72px 80px 64px;
+    display: flex; flex-direction: column;
+    color: var(--texto);
+    font-family: var(--f-texto), 'Inter', sans-serif; font-weight: var(--p-texto);
+    background:
+      radial-gradient(80% 55% at 50% 38%, color-mix(in srgb, var(--elemento) 14%, transparent) 0%, transparent 70%),
+      radial-gradient(140% 90% at 50% 100%, var(--fundo-profundo) 0%, transparent 70%),
+      linear-gradient(180deg, var(--fundo) 0%, var(--fundo-profundo) 100%);
+  }
+  /* Vinheta nas bordas */
+  .slide::before { content: ""; position: absolute; inset: 0; pointer-events: none;
+    box-shadow: inset 0 0 220px 40px rgba(0,0,0,.55); z-index: 0; }
+
+  .topo, .meio, .base, .rodape { position: relative; z-index: 1; }
+  .topo { display: flex; justify-content: space-between; align-items: center;
+    font-size: 28px; font-weight: 600; color: var(--rotulo); letter-spacing: .02em; }
+  .topo .num { font-variant-numeric: tabular-nums; letter-spacing: .1em; }
+
+  .meio { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; }
+  .base { display: flex; flex-direction: column; gap: 28px; padding-bottom: 44px; }
+
+  .titulo {
+    font-family: var(--f-titulo), 'Inter', sans-serif; font-weight: var(--p-titulo);
+    font-size: var(--tam-titulo); line-height: 1.04; letter-spacing: -0.03em; text-wrap: balance;
+  }
+  .titulo em, .apoio em, .item em, .balao em { font-style: normal; color: var(--destaque); }
+  .apoio { font-size: var(--tam-apoio); line-height: 1.38; color: var(--apoio); text-wrap: pretty; max-width: 900px; }
+  .apoio b { color: var(--texto); font-weight: 700; }
+
+  .rodape { display: flex; justify-content: space-between; align-items: center;
+    border-top: 2px solid var(--linha); padding-top: 26px;
+    font-size: 26px; color: var(--rotulo); }
+  .rodape .seta { display: inline-flex; align-items: center; gap: 12px; }
+  .rodape svg { width: 34px; height: 34px; }
+
+  /* ---------- Elemento 3D ---------- */
+  .el3d { width: var(--tam-el, 520px); height: var(--tam-el, 520px); filter: drop-shadow(0 40px 60px rgba(0,0,0,.55)); }
+
+  /* ---------- Capa ---------- */
+  .lay-capa .meio { justify-content: flex-end; align-items: flex-start; }
+  .lay-capa .titulo { font-size: var(--tam-titulo); }
+  .rotulo-capa { display: inline-block; font-size: 26px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--destaque); border: 2px solid color-mix(in srgb, var(--destaque) 60%, transparent); border-radius: 999px; padding: 10px 24px; align-self: flex-start; }
+
+  /* Foto no anel 3D */
+  .retrato { position: relative; width: var(--tam-foto, 400px); height: var(--tam-foto, 400px); }
+  .retrato .anel { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .retrato .circ { position: absolute; inset: 12%; border-radius: 50%; overflow: hidden; background: var(--cartao); }
+  .retrato .circ img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+
+  /* ---------- Lista ---------- */
+  .lay-lista .meio { flex-direction: column; align-items: stretch; justify-content: center; gap: 22px; }
+  .lay-lista .titulo { margin-bottom: 28px; }
+  .item { display: flex; gap: 28px; align-items: center; background: var(--cartao); border: 2px solid var(--linha);
+    border-radius: 28px; padding: 30px 34px; font-size: 38px; line-height: 1.25; color: var(--texto); }
+  .item .n { flex: none; width: 72px; height: 72px; border-radius: 50%; display: grid; place-items: center;
+    font-family: var(--f-titulo), sans-serif; font-weight: 800; font-size: 30px; color: var(--fundo-profundo);
+    background: radial-gradient(circle at 35% 30%, #f2f5fb 0%, var(--elemento) 55%, #3b4256 100%); }
+
+  /* ---------- Conversa ---------- */
+  .lay-conversa .meio { flex-direction: column; align-items: stretch; justify-content: center; gap: 22px; }
+  .tela { background: var(--cartao); border: 2px solid var(--linha); border-radius: 40px; padding: 34px 32px; display: flex; flex-direction: column; gap: 20px; }
+  .tela .cab { display: flex; align-items: center; gap: 18px; padding-bottom: 20px; border-bottom: 2px solid var(--linha); font-size: 28px; color: var(--apoio); font-weight: 600; }
+  .tela .cab i { width: 52px; height: 52px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #dfe5f2, var(--elemento) 60%, #2c3142); }
+  .balao { max-width: 80%; font-size: 34px; line-height: 1.3; padding: 22px 28px 16px; border-radius: 28px; }
+  .balao small { display: block; text-align: right; font-size: 22px; color: var(--rotulo); margin-top: 6px; font-weight: 600; }
+  .balao.lead { align-self: flex-start; background: #232430; border-bottom-left-radius: 8px; }
+  .balao.escritorio { align-self: flex-end; background: color-mix(in srgb, var(--elemento) 38%, var(--cartao)); border-bottom-right-radius: 8px; }
+  .pausa { align-self: center; font-size: 24px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--rotulo);
+    background: var(--fundo-profundo); border: 2px solid var(--linha); border-radius: 999px; padding: 8px 22px; }
+
+  /* ---------- Número ---------- */
+  .lay-numero .meio { flex-direction: column; justify-content: center; align-items: flex-start; gap: 10px; }
+  .numero { font-family: var(--f-titulo), sans-serif; font-weight: 800; font-size: var(--tam-numero, 300px); line-height: .9; letter-spacing: -0.05em;
+    background: linear-gradient(180deg, #f3f6fb 0%, var(--destaque) 45%, var(--elemento) 100%); -webkit-background-clip: text; background-clip: text; color: transparent;
+    filter: drop-shadow(0 24px 40px rgba(0,0,0,.5)); }
+  .numero-legenda { font-size: 36px; color: var(--apoio); font-weight: 600; }
+  .exemplo { font-size: 24px; color: var(--rotulo); letter-spacing: .08em; text-transform: uppercase; font-weight: 700; }
+
+  /* ---------- Final ---------- */
+  .lay-final .meio { flex-direction: column; gap: 30px; }
+  .lay-final .arroba { font-family: var(--f-titulo), sans-serif; font-weight: 800; font-size: 44px; color: var(--destaque); }
+</style>
+</head>
+<body>
+<div class="slide" id="slide"></div>
+<script>
+const D = window.__DADOS__;
+const M = D.marca, C = M.cores, T = D.textos || {};
+const st = document.documentElement.style, set = (k, v) => st.setProperty(k, v);
+for (const [k, v] of Object.entries({ fundo: C.fundo, 'fundo-profundo': C.fundo_profundo, cartao: C.cartao, linha: C.linha,
+  elemento: C.elemento_3d, destaque: C.destaque, texto: C.texto, apoio: C.apoio, rotulo: C.rotulo })) set('--' + k, v);
+set('--f-titulo', `'${M.fontes.titulo.familia}'`); set('--p-titulo', M.fontes.titulo.peso);
+set('--f-texto', `'${M.fontes.texto.familia}'`); set('--p-texto', M.fontes.texto.peso);
+set('--tam-apoio', (D.tamApoio || M.tamanhos.apoio) + 'px');
+if (D.tamElemento) set('--tam-el', D.tamElemento + 'px');
+
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const fmt = s => esc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/\*(.+?)\*/g, '<em>$1</em>').replace(/\n/g, '<br>');
+const seta = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+
+/* ---------- Elementos 3D (SVG) ----------
+   Cada forma é desenhada duas vezes: a de trás, escura e deslocada para baixo (dá a espessura),
+   e a da frente com gradiente metálico e um brilho na borda de cima (luz vinda de cima). */
+const E = C.elemento_3d;
+const defs = `<defs>
+  <linearGradient id="met" x1="0" y1="0" x2="0.3" y2="1"><stop offset="0" stop-color="#eef2fa"/><stop offset=".35" stop-color="${E}"/><stop offset="1" stop-color="#2a2f40"/></linearGradient>
+  <linearGradient id="met2" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9d1e4"/><stop offset=".5" stop-color="${E}"/><stop offset="1" stop-color="#3a4054"/></linearGradient>
+  <linearGradient id="lado" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a5168"/><stop offset="1" stop-color="#151722"/></linearGradient>
+  <linearGradient id="brilho" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  <radialGradient id="esf" cx=".36" cy=".3" r=".75"><stop offset="0" stop-color="#f6f8fd"/><stop offset=".28" stop-color="#c3cbe0"/><stop offset=".62" stop-color="${E}"/><stop offset="1" stop-color="#1c1f2c"/></radialGradient>
+  <radialGradient id="vidro" cx=".35" cy=".25" r=".9"><stop offset="0" stop-color="#ffffff" stop-opacity=".55"/><stop offset=".45" stop-color="${E}" stop-opacity=".35"/><stop offset="1" stop-color="#0a0a12" stop-opacity=".6"/></radialGradient>
+  <radialGradient id="buraco" cx=".5" cy=".42" r=".6"><stop offset="0" stop-color="#000"/><stop offset=".7" stop-color="#05050a"/><stop offset="1" stop-color="#2a2f40"/></radialGradient>
+  <radialGradient id="sombra" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#000" stop-opacity=".7"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+</defs>`;
+const chao = (cy = 368, rx = 130) => `<ellipse cx="200" cy="${cy}" rx="${rx}" ry="18" fill="url(#sombra)"/>`;
+// Forma extrudada: d = caminho SVG; prof = espessura
+const extr = (d, prof = 20, extra = '') => `<path d="${d}" fill="url(#lado)" transform="translate(0 ${prof})"/>
+  <path d="${d}" fill="url(#met)"/><path d="${d}" fill="none" stroke="url(#brilho)" stroke-width="3"/>${extra}`;
+
+const FORMAS = {
+  esfera: () => chao(372, 120) + `<circle cx="200" cy="190" r="150" fill="url(#esf)"/><ellipse cx="150" cy="120" rx="46" ry="26" fill="#fff" opacity=".35" transform="rotate(-30 150 120)"/>`,
+  anel: () => chao(360, 150) + `<g transform="rotate(-18 200 200)">
+      <ellipse cx="200" cy="214" rx="160" ry="74" fill="none" stroke="url(#lado)" stroke-width="44"/>
+      <ellipse cx="200" cy="200" rx="160" ry="74" fill="none" stroke="url(#met2)" stroke-width="44"/>
+      <ellipse cx="200" cy="200" rx="160" ry="74" fill="none" stroke="url(#brilho)" stroke-width="4" transform="translate(0 -20)"/></g>`,
+  cubo: () => chao(372, 140) + `<path d="M200 52 L332 122 Q340 126 340 136 L340 268 Q340 278 332 282 L208 348 Q200 352 192 348 L68 282 Q60 278 60 268 L60 136 Q60 126 68 122 Z" fill="url(#lado)"/>
+      <path d="M200 52 L332 122 L200 192 L68 122 Z" fill="#dfe5f2"/>
+      <path d="M68 122 L200 192 L200 350 L68 280 Z" fill="url(#met)"/>
+      <path d="M332 122 L200 192 L200 350 L332 280 Z" fill="url(#met2)" opacity=".85"/>
+      <path d="M200 52 L332 122 L200 192 L68 122 Z" fill="url(#brilho)" opacity=".6"/>`,
+  cristal: () => chao(372, 110) + `<path d="M200 30 L310 160 L200 360 Z" fill="url(#met2)"/><path d="M200 30 L90 160 L200 360 Z" fill="url(#met)"/>
+      <path d="M90 160 L200 200 L310 160 L200 360 Z" fill="url(#lado)" opacity=".55"/><path d="M200 30 L90 160 L200 200 L310 160 Z" fill="url(#vidro)"/>
+      <path d="M200 30 L90 160 M200 30 L310 160 M200 30 L200 200" stroke="#fff" stroke-opacity=".5" stroke-width="2"/>`,
+  mensagem: () => chao(372, 140) + extr('M86 70 H314 Q350 70 350 106 V236 Q350 272 314 272 H170 L104 330 L116 272 H86 Q50 272 50 236 V106 Q50 70 86 70 Z', 22,
+      `<circle cx="140" cy="171" r="20" fill="#16161f" opacity=".75"/><circle cx="200" cy="171" r="20" fill="#16161f" opacity=".75"/><circle cx="260" cy="171" r="20" fill="#16161f" opacity=".75"/>`),
+  funil: () => chao(376, 70) + `<path d="M50 96 L350 96 L232 238 L232 352 L168 352 L168 238 Z" fill="url(#lado)" transform="translate(0 16)"/>
+      <path d="M50 96 L350 96 L232 238 L232 352 L168 352 L168 238 Z" fill="url(#met)"/>
+      <ellipse cx="200" cy="96" rx="150" ry="36" fill="url(#lado)"/><ellipse cx="200" cy="92" rx="138" ry="28" fill="#0d0d15"/>
+      <ellipse cx="200" cy="96" rx="150" ry="36" fill="none" stroke="#eef2fa" stroke-opacity=".7" stroke-width="3"/>
+      <circle cx="160" cy="84" r="9" fill="${C.destaque}"/><circle cx="214" cy="78" r="9" fill="${C.destaque}"/><circle cx="246" cy="92" r="9" fill="${C.destaque}"/>`,
+  relogio: () => chao(374, 130) + `<circle cx="200" cy="214" r="150" fill="url(#lado)"/><circle cx="200" cy="196" r="150" fill="url(#met)"/>
+      <circle cx="200" cy="196" r="118" fill="#12121b"/><circle cx="200" cy="196" r="150" fill="none" stroke="url(#brilho)" stroke-width="4"/>
+      ${[...Array(12)].map((_, i) => `<line x1="200" y1="92" x2="200" y2="${i % 3 ? 102 : 112}" stroke="${C.apoio}" stroke-width="${i % 3 ? 3 : 6}" stroke-linecap="round" transform="rotate(${i * 30} 200 196)"/>`).join('')}
+      <line x1="200" y1="196" x2="200" y2="122" stroke="${C.texto}" stroke-width="10" stroke-linecap="round"/>
+      <line x1="200" y1="196" x2="262" y2="226" stroke="${C.destaque}" stroke-width="8" stroke-linecap="round"/><circle cx="200" cy="196" r="12" fill="${C.texto}"/>`,
+  grafico: () => chao(372, 150) + [[70, 230], [160, 170], [250, 90]].map(([x, y]) => {
+      const h = 330 - y;
+      return `<path d="M${x} ${y} l40 -20 l40 20 v${h} l-40 20 l-40 -20 Z" fill="url(#lado)"/>
+        <path d="M${x} ${y} l40 20 v${h} l-40 -20 Z" fill="url(#met)"/><path d="M${x + 40} ${y + 20} l40 -20 v${h} l-40 20 Z" fill="url(#met2)" opacity=".85"/>
+        <path d="M${x} ${y} l40 -20 l40 20 l-40 20 Z" fill="#e8edf7"/>`; }).join(''),
+  alvo: () => chao(374, 130) + `<circle cx="200" cy="212" r="150" fill="url(#lado)"/>` +
+      [150, 112, 74, 36].map((r, i) => `<circle cx="200" cy="196" r="${r}" fill="${i % 2 ? '#12121b' : 'url(#met)'}"/>`).join('') +
+      `<circle cx="200" cy="196" r="150" fill="none" stroke="url(#brilho)" stroke-width="4"/>`,
+  cadeado: () => chao(374, 120) + `<path d="M130 170 V120 a70 70 0 0 1 140 0 V170" fill="none" stroke="url(#lado)" stroke-width="34" transform="translate(0 10)"/>
+      <path d="M130 170 V120 a70 70 0 0 1 140 0 V170" fill="none" stroke="url(#met2)" stroke-width="34"/>` +
+      extr('M96 160 H304 Q330 160 330 186 V318 Q330 344 304 344 H96 Q70 344 70 318 V186 Q70 160 96 160 Z', 18,
+      `<circle cx="200" cy="236" r="22" fill="#12121b"/><rect x="190" y="244" width="20" height="50" rx="8" fill="#12121b"/>`),
+  lupa: () => chao(376, 120) + `<line x1="250" y1="250" x2="340" y2="340" stroke="url(#lado)" stroke-width="44" stroke-linecap="round" transform="translate(0 10)"/>
+      <line x1="250" y1="250" x2="340" y2="340" stroke="url(#met2)" stroke-width="44" stroke-linecap="round"/>
+      <circle cx="170" cy="180" r="120" fill="none" stroke="url(#lado)" stroke-width="36" transform="translate(0 12)"/>
+      <circle cx="170" cy="180" r="102" fill="url(#vidro)"/><circle cx="170" cy="180" r="120" fill="none" stroke="url(#met)" stroke-width="36"/>
+      <ellipse cx="130" cy="135" rx="34" ry="18" fill="#fff" opacity=".4" transform="rotate(-35 130 135)"/>`,
+  furo: () => `<ellipse cx="200" cy="232" rx="180" ry="96" fill="url(#lado)"/><ellipse cx="200" cy="214" rx="180" ry="96" fill="url(#met)"/>
+      <ellipse cx="200" cy="214" rx="180" ry="96" fill="none" stroke="url(#brilho)" stroke-width="4"/>
+      <ellipse cx="200" cy="222" rx="118" ry="58" fill="url(#buraco)"/>
+      <circle cx="120" cy="120" r="14" fill="${C.destaque}"/><circle cx="170" cy="96" r="14" fill="${C.destaque}"/><circle cx="214" cy="150" r="14" fill="${C.destaque}" opacity=".55"/>
+      <path d="M120 120 Q160 150 196 200" stroke="${C.destaque}" stroke-opacity=".35" stroke-width="3" stroke-dasharray="6 10" fill="none"/>`,
+};
+const el3d = nome => {
+  const f = FORMAS[nome] || FORMAS.esfera;
+  return `<svg class="el3d" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">${defs}${f()}</svg>`;
+};
+const anelSVG = `<svg class="anel" viewBox="0 0 400 400">${defs}
+  <circle cx="200" cy="206" r="182" fill="none" stroke="url(#lado)" stroke-width="22"/>
+  <circle cx="200" cy="200" r="182" fill="none" stroke="url(#met)" stroke-width="22"/>
+  <circle cx="200" cy="200" r="182" fill="none" stroke="url(#brilho)" stroke-width="3" transform="translate(0 -8)"/></svg>`;
+const retrato = () => `<div class="retrato">${anelSVG}<div class="circ">${M.foto ? `<img src="${esc(M.foto)}" alt="">` : ''}</div></div>`;
+
+/* ---------- Monta o slide ---------- */
+const lay = D.layout || 'ponto';
+const ultimo = D.pagina && D.pagina.split('/')[0] === D.pagina.split('/')[1];
+const topo = `<div class="topo"><span>${esc(M.arroba)}</span><span class="num">${esc(D.pagina || '')}</span></div>`;
+const rodape = `<div class="rodape"><span>${esc(M.nome)}</span>${ultimo ? '' : `<span class="seta">${esc(M.textos_fixos.arraste)} ${seta}</span>`}</div>`;
+const titulo = T.titulo ? `<h1 class="titulo">${fmt(T.titulo)}</h1>` : '';
+const apoio = T.apoio ? `<p class="apoio">${fmt(T.apoio)}</p>` : '';
+let meio = '', base = titulo + apoio;
+
+if (lay === 'capa') {
+  const temFoto = D.foto !== false && (D.foto || M.foto);
+  meio = temFoto ? retrato() : el3d(D.elemento || 'anel');
+  base = (T.rotulo ? `<span class="rotulo-capa">${esc(T.rotulo)}</span>` : '') + titulo + apoio;
+} else if (lay === 'ponto') {
+  meio = el3d(D.elemento);
+} else if (lay === 'lista') {
+  meio = titulo + (T.itens || []).map((t, i) => `<div class="item"><span class="n">${i + 1}</span><span>${fmt(t)}</span></div>`).join('');
+  base = apoio;
+} else if (lay === 'conversa') {
+  const bal = (T.conversa || []).map(b => b.pausa ? `<div class="pausa">${esc(b.pausa)}</div>`
+    : `<div class="balao ${b.de === 'escritorio' ? 'escritorio' : 'lead'}">${fmt(b.texto)}${b.hora ? `<small>${esc(b.hora)}</small>` : ''}</div>`).join('');
+  meio = `<div class="tela"><div class="cab"><i></i>${esc(T.contato || 'Lead novo')}</div>${bal}</div>`;
+} else if (lay === 'numero') {
+  meio = `${T.exemplo !== false ? `<span class="exemplo">${esc(T.exemplo || 'Exemplo, números redondos')}</span>` : ''}<div class="numero">${esc(T.numero)}</div>${T.numero_legenda ? `<div class="numero-legenda">${fmt(T.numero_legenda)}</div>` : ''}`;
+} else if (lay === 'final') {
+  meio = retrato() + `<div class="arroba">${esc(M.arroba)}</div>`;
+  base = titulo + apoio;
+}
+
+const s = document.getElementById('slide');
+s.classList.add('lay-' + lay);
+s.innerHTML = topo + `<div class="meio">${meio}</div><div class="base">${base}</div>` + rodape;
+
+// Diminui o título (e depois o elemento 3D) até tudo caber sem cortar.
+window.__ajustar = () => {
+  let tam = D.tamTitulo, el = parseInt(getComputedStyle(s).getPropertyValue('--tam-el')) || 520;
+  set('--tam-titulo', tam + 'px');
+  const m = s.querySelector('.meio');
+  const estoura = () => s.scrollHeight > s.clientHeight + 1 || m.scrollHeight > m.clientHeight + 1 ||
+    [...s.querySelectorAll('.titulo')].some(t => t.scrollWidth > t.clientWidth + 1);
+  while (estoura() && el > 300 && s.querySelector('.el3d')) { el -= 20; set('--tam-el', el + 'px'); }
+  while (estoura() && tam > 48) { tam -= 2; set('--tam-titulo', tam + 'px'); }
+  window.__tamFinal = tam;
+};
+</script>
+</body>
+</html>
