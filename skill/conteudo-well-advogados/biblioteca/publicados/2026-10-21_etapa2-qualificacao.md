@@ -1,0 +1,15 @@
+# 2026-10-21_etapa2-qualificacao
+- Formato: carrossel (7 slides)
+- Pilar: Por que o digital não vira contrato
+- Série: Do clique ao contrato, etapa 2 (cadastro → lead qualificado)
+- Gancho usado: "Seu anúncio traz curioso porque chama curioso." (capa com lista de leads do CRM)
+- Cenas: lista de leads, funil com números, errado x certo, formulário, alvo 3D, cartão de perfil
+- Link: https://www.instagram.com/p/DexCItdoxSa/
+- Arquivos: saida/2026-10-21_etapa2-qualificacao/
+- Alcance:
+- Salvamentos:
+- Compartilhamentos:
+- Comentários:
+- Seguidores ganhos:
+- Por que funcionou / por que não funcionou:
+- Comentários que viraram pauta: (a legenda pergunta quantos de cada 10 leads têm caso)

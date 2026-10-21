@@ -1,4 +1,5 @@
-# 2026-10_lead-barato
+# Reserva: lead barato (NÃO publicado)
+- Status: pronto e aprovado, nunca foi postado. Usar quando faltar post. Arquivos em exemplos/MODELO_LEAD_BARATO*. Regerar antes de postar pra pegar o slide final com o cartão de perfil.
 - Formato: carrossel
 - Pilar: Tráfego pago sem mito
 - Gancho usado: "Lead barato é o lead mais caro que existe."
