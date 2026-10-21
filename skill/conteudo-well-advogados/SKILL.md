@@ -67,6 +67,8 @@ Depois que o Well aprovar a copy slide a slide:
    | `caixinha` | Caixinha de pergunta do Stories sobre uma foto | `titulo`, `pergunta`, `foto`, `posicao` |
    | `comparacao` | Jeito comum riscado x jeito melhor | `errado: {rotulo, texto}`, `certo: {rotulo, texto}` |
    | `funil` | Etapas com número, a do furo em destaque (marcado como exemplo) | `etapas: [{nome, valor, furo}]` |
+   | `leads` | Lista de leads como no CRM, com etiqueta (ruim, neutro, bom) | `titulo`, `total`, `itens: [{nome, info, tag, tipo}]` (nomes fictícios) |
+   | `formulario` | Formulário com uma pergunta e opções em botão | `passo`, `progresso`, `pergunta`, `opcoes`, `marcada` (índice) |
    | `foto` | Quadro de celular gravando: com `legenda`, vira vídeo com legenda na tela (sem foto); com `foto`, mostra a foto | `legenda`, `foto`, `posicao`, `rec` |
 
    Fotos do Well ficam em `assets/fotos/`. Aprovadas: a foto de perfil (`well_perfil.jpg`, recorte `well_perfil_rosto.jpg`), usada no avatar do cartão de perfil do slide final, e a da varanda (`well_img_0441.jpg`), como fundo da cena `caixinha`. As outras fotos da pasta não foram aprovadas: não use até ele mandar fotos novas.

@@ -1,0 +1,131 @@
+{
+  "tema": "Do clique ao contrato, etapa 2: chega muito curioso",
+  "pilar": "Por que o digital não vira contrato",
+  "slides": [
+    {
+      "layout": "capa",
+      "cena": {
+        "tipo": "leads",
+        "titulo": "Leads da semana",
+        "total": "5 novos",
+        "itens": [
+          {
+            "nome": "Marcos S.",
+            "info": "Formulário · 09:12",
+            "tag": "Só dúvida",
+            "tipo": "ruim"
+          },
+          {
+            "nome": "Ana P.",
+            "info": "Formulário · 10:40",
+            "tag": "Sem perfil",
+            "tipo": "ruim"
+          },
+          {
+            "nome": "Júlio R.",
+            "info": "Formulário · 11:05",
+            "tag": "Não respondeu",
+            "tipo": "neutro"
+          },
+          {
+            "nome": "Paulo T.",
+            "info": "Formulário · 16:48",
+            "tag": "Tem caso",
+            "tipo": "bom"
+          }
+        ]
+      },
+      "textos": {
+        "rotulo": "Do clique ao contrato · etapa 2 de 7",
+        "titulo": "Seu anúncio traz curioso porque *chama* curioso",
+        "apoio": "Não é azar. É a mensagem e a falta de filtro."
+      }
+    },
+    {
+      "layout": "ponto",
+      "cena": {
+        "tipo": "funil",
+        "etapas": [
+          {
+            "nome": "Preencheram",
+            "valor": "100"
+          },
+          {
+            "nome": "Tinham caso",
+            "valor": "15",
+            "furo": true
+          }
+        ]
+      },
+      "textos": {
+        "titulo": "Como saber se o furo é *aqui*",
+        "apoio": "De cada 10 que preencheram, quantos o comercial confirmou que têm caso? Se a maioria não tem perfil, o furo é aqui."
+      }
+    },
+    {
+      "layout": "lista",
+      "textos": {
+        "titulo": "Por que chega quem *não tem caso*",
+        "itens": [
+          "Promessa *genérica* atrai qualquer um",
+          "Anúncio que promete *grátis* ou rápido",
+          "Formulário sem *nenhum* filtro",
+          "O Meta aprendendo com o lead *errado*",
+          "Público aberto *demais*"
+        ]
+      }
+    },
+    {
+      "layout": "ponto",
+      "cena": {
+        "tipo": "comparacao",
+        "errado": {
+          "rotulo": "Comum",
+          "texto": "Você que é empresário com dívida acima de 100 mil..."
+        },
+        "certo": {
+          "rotulo": "Melhor",
+          "texto": "Aquele aviso de protesto que chegou ontem e você ainda não contou pro sócio."
+        }
+      },
+      "textos": {
+        "titulo": "O filtro começa no *vídeo*",
+        "apoio": "Quem tem o problema se reconhece na situação. Quem não tem, passa direto."
+      }
+    },
+    {
+      "layout": "ponto",
+      "cena": {
+        "tipo": "formulario",
+        "passo": "Pergunta 1 de 3",
+        "progresso": 33,
+        "pergunta": "Essa dívida está no nome da empresa ou no seu?",
+        "opcoes": [
+          "Da empresa",
+          "No meu nome",
+          "As duas"
+        ],
+        "marcada": 0
+      },
+      "textos": {
+        "titulo": "Uma pergunta *separa* o público",
+        "apoio": "Logo no começo, com botão. Quem não é do seu perfil sai ali, com uma resposta educada, sem ocupar o comercial."
+      }
+    },
+    {
+      "layout": "ponto",
+      "elemento": "alvo",
+      "textos": {
+        "titulo": "Só o lead certo *ensina* o anúncio",
+        "apoio": "Se o Meta conta todo cadastro como resultado, aprende a trazer mais gente igual. Só quem passou no filtro deve voltar pra ele como conversão."
+      }
+    },
+    {
+      "layout": "final",
+      "textos": {
+        "titulo": "Etapa 2 de 7. Segue pra ver a *próxima*",
+        "apoio": "Na próxima: o lead tem caso, mas some depois do primeiro contato."
+      }
+    }
+  ]
+}
