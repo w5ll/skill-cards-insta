@@ -1,0 +1,14 @@
+# 2026-10-21_funil-7-etapas
+- Formato: carrossel (9 slides)
+- Pilar: Por que o digital não vira contrato
+- Série: Do clique ao contrato, post 0 (abertura: as 7 etapas do funil)
+- Gancho usado: "Você sabe em que etapa o seu escritório perde cliente?"
+- Link: https://www.instagram.com/p/DevK4fTDXrO/
+- Arquivos: saida/2026-10-21_funil-7-etapas/
+- Alcance:
+- Salvamentos:
+- Compartilhamentos:
+- Comentários:
+- Seguidores ganhos:
+- Por que funcionou / por que não funcionou:
+- Comentários que viraram pauta: (a pergunta da legenda é sobre ter os números do anúncio e do comercial no mesmo lugar; as respostas podem virar o post sobre painel)

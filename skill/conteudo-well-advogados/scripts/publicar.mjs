@@ -28,13 +28,14 @@ const confirmar = args.includes('--confirmar');
 function sair(msg) { console.error(msg); process.exit(1); }
 if (!TOKEN) sair('Falta o token. Coloque IG_ACCESS_TOKEN nas variáveis do ambiente e abra uma sessão nova.');
 
-async function api(caminho, params = {}, metodo = 'GET') {
+async function api(caminho, params = {}, metodo = 'GET', tolerar = []) {
   const url = new URL(API + caminho);
   const corpo = new URLSearchParams({ ...params, access_token: TOKEN });
   const r = metodo === 'GET'
     ? await fetch(url + '?' + corpo)
     : await fetch(url, { method: 'POST', body: corpo });
   const j = await r.json();
+  if (j.error && tolerar.includes(j.error.code)) return { erro: j.error };
   if (j.error) sair(`Erro da API do Instagram: ${j.error.message} (código ${j.error.code})`);
   return j;
 }
@@ -126,6 +127,14 @@ for (const [i, u] of urls.entries()) {
 }
 const { id: carrossel } = await api(`/${eu.user_id}/media`, { media_type: 'CAROUSEL', children: filhos.join(','), caption: legenda }, 'POST');
 await pronto(carrossel);
-const { id: post } = await api(`/${eu.user_id}/media_publish`, { creation_id: carrossel }, 'POST');
+// O Instagram às vezes ainda não liberou o carrossel logo depois do FINISHED (erro 9007): espera e tenta de novo.
+let post;
+for (let i = 0; i < 10 && !post; i++) {
+  if (i) await esperar(5000);
+  const r = await api(`/${eu.user_id}/media_publish`, { creation_id: carrossel }, 'POST', [9007]);
+  if (r.erro) console.log(`carrossel ainda não liberado, tentando de novo (${i + 1}/10)`);
+  else post = r.id;
+}
+if (!post) sair('O Instagram não liberou o carrossel para publicar. Nada foi publicado; tente de novo em alguns minutos.');
 const { permalink } = await api(`/${post}`, { fields: 'permalink' });
 console.log(`\nPublicado: ${permalink}`);
