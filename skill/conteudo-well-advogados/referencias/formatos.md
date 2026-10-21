@@ -46,6 +46,20 @@ SLIDE FINAL: chamada pra ação + @lunardiwell
 
 Para cada slide, entregue: título, texto de apoio e sugestão do elemento visual 3D (ver seção 8). Antes de montar o visual, mostre a copy slide a slide pro Well aprovar.
 
+### 7.4 Carrossel da série "Do clique ao contrato"
+
+Um post por etapa do funil (lista e ordem em `referencias/banco-de-pautas.md`). Todos seguem a mesma estrutura, pra série ficar reconhecível e ser produzida em lote:
+
+```
+SLIDE 1 (capa): a dor da etapa em forma de pergunta ou cena ("Metade das suas reuniões não acontece?")
+SLIDE 2: como saber se o seu furo é esse. A conta da taxa em português ("de cada 10 que marcaram, quantos apareceram?")
+SLIDE 3: as causas mais comuns (lista, 3 a 5 itens)
+SLIDES 4 a 7: uma ação por slide, com exemplo concreto
+SLIDE FINAL: "Etapa X de 7. Salva e segue pra ver a próxima." + @lunardiwell
+```
+
+Rótulo fixo da série na capa e no final: "Do clique ao contrato · etapa X de 7".
+
 ### 7.3 Legenda
 
 - Primeira linha: reforça o gancho (aparece antes do "mais").

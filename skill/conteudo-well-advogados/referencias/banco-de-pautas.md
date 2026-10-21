@@ -15,6 +15,25 @@ O banco mais rico está em `referencias/problemas-e-solucoes.md`: 26 problemas r
 - Taxa de passagem: o número que mostra em que etapa o seu escritório perde cliente.
 - Cada um dos 4 furos do carrossel de apresentação vira um post: demora pra responder, formulário sem filtro, "vou pensar" sem retorno, proposta sem reunião.
 
+**Série "Do clique ao contrato" (aprovada pelo Well):** um carrossel por etapa do funil. Cada post ensina a ler uma taxa de passagem e o que fazer quando ela está baixa. Estrutura padrão em `referencias/formatos.md` (seção 7.4). Ordem de publicação:
+
+| Post | Etapa (taxa) | Sinal de que o furo está aqui | O que fazer |
+| --- | --- | --- | --- |
+| 0 | Abertura: o funil inteiro | "O digital não funciona" | Mostrar as 7 etapas e anunciar a série |
+| 1 | Clique → cadastro | Muito clique e pouco contato | Página e formulário: perguntas fáceis primeiro, com botão, nome por último |
+| 2 | Cadastro → lead qualificado | Chega muito curioso | Criativo e promessa: uma dor por anúncio, filtro no formulário, só o qualificado volta pro Meta |
+| 3 | Qualificado → respondeu | O lead some depois do primeiro contato | Responder em minutos, primeira mensagem curta com uma pergunta, retomada automática, atendimento fora do horário. O caso do CRM com lead parado no "oi" entra aqui |
+| 4 | Respondeu → reunião marcada | Conversa boa que não vira reunião | Convite logo depois da qualificação, oferecer dois horários em vez de "quando você pode?" |
+| 5 | Marcada → compareceu | Agenda cheia e metade falta | Lembretes na véspera e no dia, pedir o e-mail e mandar convite de agenda, dizer o que vai ser analisado e que documento trazer, reunião perto da data do agendamento |
+| 6 | Reunião → proposta | Reunião que termina em "vou pensar" | Ouvir o problema antes de explicar o direito, entender se a pessoa pode contratar, ter quem decide na reunião |
+| 7 | Proposta → contrato | Muita proposta recusada | Proposta apresentada em reunião (não jogada no WhatsApp), prazo de validade, retomada combinada, custo de não agir, pagamento facilitado. Cuidado com as regras da OAB |
+| 8 | Contrato → entrada paga (bônus) | Assina e não paga | "Contrato assinado não é cliente. Cliente é quem pagou a entrada." |
+
+Cuidados da série:
+- Termos traduzidos: lead qualificado (não MQL), "lead que o comercial confirmou que tem caso" (não SQL), falta (não no-show), retomada (não follow-up).
+- Não dizer o que é "taxa baixa" com número de mercado. Ou o Well passa as faixas que ele vê (marcar "na minha experiência"), ou o post ensina a comparar o escritório com ele mesmo, semana a semana.
+- Número de exemplo sempre redondo e marcado como exemplo.
+
 **Banco geral:**
 
 1. O erro de atendimento que mais faz escritório perder cliente no WhatsApp.
