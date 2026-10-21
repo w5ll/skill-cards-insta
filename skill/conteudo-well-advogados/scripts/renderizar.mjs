@@ -32,6 +32,12 @@ function imagem(caminho, base) {
   return `data:${tipo};base64,${readFileSync(abs).toString('base64')}`;
 }
 
+// Cena com foto: o caminho pode ser relativo ao .json ou à pasta da skill (ex.: assets/fotos/...).
+function comFoto(c, base) {
+  if (!c || !c.foto) return c;
+  return { ...c, foto: imagem(c.foto, base) || imagem(c.foto, RAIZ_SKILL) };
+}
+
 function linkFontes(marca) {
   const fam = [...new Set([marca.fontes.titulo.familia, marca.fontes.texto.familia])];
   const q = fam.map(f => `family=${encodeURIComponent(f)}:wght@400;500;600;700;800`).join('&');
@@ -61,7 +67,7 @@ for (const arq of arquivos) {
     const saida = abs.replace(/\.json$/i, `_${num}.png`);
     const padraoTitulo = sl.layout === 'capa' ? marca.tamanhos.titulo_capa : marca.tamanhos.titulo;
     const dados = {
-      layout: sl.layout, textos: sl.textos, elemento: sl.elemento, foto: sl.foto,
+      layout: sl.layout, textos: sl.textos, elemento: sl.elemento, foto: sl.foto, cena: comFoto(sl.cena, dirname(abs)),
       tamTitulo: sl.tam_titulo || padraoTitulo, tamApoio: sl.tam_apoio, tamElemento: sl.tam_elemento,
       pagina: `${num}/${total}`, marca,
     };

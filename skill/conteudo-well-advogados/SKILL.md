@@ -58,6 +58,19 @@ Depois que o Well aprovar a copy slide a slide:
    | `final` | Chamada pra ação + foto do Well + @lunardiwell |
 
 2. Elementos 3D disponíveis (campo `elemento`): `esfera`, `anel`, `cubo`, `cristal`, `mensagem`, `funil`, `relogio`, `grafico`, `alvo`, `cadeado`, `lupa`, `furo`. Um por slide.
+   **Cenas (preferir ao 3D):** nos layouts `capa` e `ponto`, o campo `cena` troca o elemento 3D por uma cena do dia a dia do advogado. O 3D fica pra quando nenhuma cena fizer sentido. Exemplos completos em `saida/2026-10-21_etapa1-criativo/ETAPA1_CRIATIVO.json`.
+
+   | `tipo` | O que mostra | Campos |
+   | --- | --- | --- |
+   | `anuncios` | Até 3 anúncios patrocinados em sequência, como no feed | `itens: [{nome, texto, botao}]` (nome fictício, nunca escritório real) |
+   | `notificacoes` | Tela de bloqueio do celular com notificações | `hora`, `data`, `itens: [{icone, cor, titulo, texto, quando}]` |
+   | `caixinha` | Caixinha de pergunta do Stories sobre uma foto | `titulo`, `pergunta`, `foto`, `posicao` |
+   | `comparacao` | Jeito comum riscado x jeito melhor | `errado: {rotulo, texto}`, `certo: {rotulo, texto}` |
+   | `funil` | Etapas com número, a do furo em destaque (marcado como exemplo) | `etapas: [{nome, valor, furo}]` |
+   | `foto` | Foto do Well num quadro de celular gravando | `foto`, `posicao`, `rec` |
+
+   Fotos do Well ficam em `assets/fotos/` (`well_rosto.jpg` é o recorte usado no anel da capa e do final).
+
 3. Destaque na cor de destaque com `*palavra*` (uma ou duas palavras por slide, nunca a frase inteira).
 4. Renderize: `node scripts/renderizar.mjs caminho/CARROSSEL.json`. Os PNGs saem ao lado do `.json`, numerados (`_01.png`, `_02.png`...).
 5. Abra os PNGs e confira antes de entregar: texto cortado, palavra destacada, numeração.

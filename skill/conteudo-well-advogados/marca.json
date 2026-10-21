@@ -1,7 +1,7 @@
 {
   "arroba": "@lunardiwell",
   "nome": "Well | Marketing jurídico",
-  "foto": "assets/foto-well.jpg",
+  "foto": "assets/fotos/well_rosto.jpg",
   "cores": {
     "fundo": "#16161f",
     "fundo_profundo": "#0a0a12",
@@ -14,8 +14,14 @@
     "rotulo": "#8f97ab"
   },
   "fontes": {
-    "titulo": { "familia": "Sora", "peso": 800 },
-    "texto": { "familia": "Manrope", "peso": 500 }
+    "titulo": {
+      "familia": "Sora",
+      "peso": 800
+    },
+    "texto": {
+      "familia": "Manrope",
+      "peso": 500
+    }
   },
   "tamanhos": {
     "titulo_capa": 94,
