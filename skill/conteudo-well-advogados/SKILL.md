@@ -67,6 +67,7 @@ Depois que o Well aprovar a copy slide a slide:
    | `caixinha` | Caixinha de pergunta do Stories sobre uma foto | `titulo`, `pergunta`, `foto`, `posicao` |
    | `comparacao` | Jeito comum riscado x jeito melhor | `errado: {rotulo, texto}`, `certo: {rotulo, texto}` |
    | `funil` | Etapas com número, a do furo em destaque (marcado como exemplo) | `etapas: [{nome, valor, furo}]` |
+   | `conversa` | Conversa de WhatsApp (igual ao layout `conversa`, mas como cena) | `contato`, `conversa: [{de, texto, hora} ou {pausa}]` |
    | `leads` | Lista de leads como no CRM, com etiqueta (ruim, neutro, bom) | `titulo`, `total`, `itens: [{nome, info, tag, tipo}]` (nomes fictícios) |
    | `formulario` | Formulário com uma pergunta e opções em botão | `passo`, `progresso`, `pergunta`, `opcoes`, `marcada` (índice) |
    | `foto` | Quadro de celular gravando: com `legenda`, vira vídeo com legenda na tela (sem foto); com `foto`, mostra a foto | `legenda`, `foto`, `posicao`, `rec` |

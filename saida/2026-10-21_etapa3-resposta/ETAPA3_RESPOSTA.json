@@ -1,0 +1,163 @@
+{
+  "tema": "Do clique ao contrato, etapa 3: o lead some depois do primeiro contato",
+  "pilar": "Por que o digital não vira contrato",
+  "slides": [
+    {
+      "layout": "capa",
+      "cena": {
+        "tipo": "conversa",
+        "contato": "Lead do anúncio",
+        "conversa": [
+          {
+            "de": "lead",
+            "texto": "Boa noite! A dívida da empresa já foi pra protesto.",
+            "hora": "21:47"
+          },
+          {
+            "pausa": "dia seguinte"
+          },
+          {
+            "de": "escritorio",
+            "texto": "Bom dia! Pode me contar mais sobre o seu caso?",
+            "hora": "09:30"
+          },
+          {
+            "de": "lead",
+            "texto": "Obrigado, já tô falando com outro escritório.",
+            "hora": "09:52"
+          }
+        ]
+      },
+      "textos": {
+        "rotulo": "Do clique ao contrato · etapa 3 de 7",
+        "titulo": "Lead com caso que some não sumiu. Foi atendido por *outro*.",
+        "apoio": "Ele chamou mais de um escritório. Ficou com quem respondeu primeiro."
+      }
+    },
+    {
+      "layout": "ponto",
+      "cena": {
+        "tipo": "funil",
+        "etapas": [
+          {
+            "nome": "Tinham caso",
+            "valor": "100"
+          },
+          {
+            "nome": "Responderam",
+            "valor": "40",
+            "furo": true
+          }
+        ]
+      },
+      "textos": {
+        "titulo": "Como saber se o furo é *aqui*",
+        "apoio": "De cada 10 leads com caso, quantos responderam a primeira mensagem? Se a maioria fica no \"visto\", o furo é aqui."
+      }
+    },
+    {
+      "layout": "lista",
+      "textos": {
+        "titulo": "Por que o lead *some*",
+        "itens": [
+          "Resposta que chega *horas* depois",
+          "Primeira mensagem *longa* demais",
+          "Áudio de 3 minutos de *apresentação*",
+          "Ninguém *retoma* quem não respondeu",
+          "Lead que chega à noite e no *fim de semana*"
+        ]
+      }
+    },
+    {
+      "layout": "ponto",
+      "cena": {
+        "tipo": "comparacao",
+        "errado": {
+          "rotulo": "Comum",
+          "texto": "Respondido no dia seguinte, às 10h."
+        },
+        "certo": {
+          "rotulo": "Melhor",
+          "texto": "Respondido em 5 minutos, com o celular ainda na mão dele."
+        }
+      },
+      "textos": {
+        "titulo": "Os primeiros *minutos* decidem",
+        "apoio": "Quem responde primeiro começa a conversa na frente."
+      }
+    },
+    {
+      "layout": "ponto",
+      "cena": {
+        "tipo": "conversa",
+        "contato": "Paulo · lead do anúncio",
+        "conversa": [
+          {
+            "de": "escritorio",
+            "texto": "Oi, Paulo! Vi que a dívida é da empresa. Ela já está em atraso ou ainda em dia?",
+            "hora": "21:52"
+          },
+          {
+            "de": "lead",
+            "texto": "Já tá atrasada, uns 3 meses.",
+            "hora": "21:55"
+          }
+        ]
+      },
+      "textos": {
+        "titulo": "Começa com *uma pergunta* fácil",
+        "apoio": "Sem textão, sem áudio longo. Uma pergunta que se responde em 5 segundos puxa a conversa."
+      }
+    },
+    {
+      "layout": "ponto",
+      "cena": {
+        "tipo": "notificacoes",
+        "hora": "9:41",
+        "data": "quinta-feira",
+        "itens": [
+          {
+            "icone": "✆",
+            "cor": "#4f9d69",
+            "titulo": "Escritório",
+            "texto": "Separei 20 minutos amanhã pra olhar seu contrato.",
+            "quando": "agora"
+          },
+          {
+            "icone": "✆",
+            "cor": "#4f9d69",
+            "titulo": "Escritório",
+            "texto": "Conseguiu ver? Tem um ponto que muda muito.",
+            "quando": "ontem"
+          },
+          {
+            "icone": "✆",
+            "cor": "#4f9d69",
+            "titulo": "Escritório",
+            "texto": "Oi, Paulo! A dívida já está em atraso?",
+            "quando": "segunda"
+          }
+        ]
+      },
+      "textos": {
+        "titulo": "Quem não respondeu, *retoma*",
+        "apoio": "Poucas mensagens, espaçadas, cada uma com um motivo novo. Doze mensagens seguidas queimam o número."
+      }
+    },
+    {
+      "layout": "ponto",
+      "elemento": "relogio",
+      "textos": {
+        "titulo": "Lead da noite precisa de *plantão*",
+        "apoio": "Muito lead chega à noite e no fim de semana. Um robô ou uma IA que responde na hora e faz as primeiras perguntas segura o lead até o comercial chegar."
+      }
+    },
+    {
+      "layout": "final",
+      "textos": {
+        "titulo": "Etapa 3 de 7. Segue pra ver a *próxima*",
+        "apoio": "Na próxima: a conversa foi boa, mas não virou reunião."
+      }
+    }
+  ]
+}

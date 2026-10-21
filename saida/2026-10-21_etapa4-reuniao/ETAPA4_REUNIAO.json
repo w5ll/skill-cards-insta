@@ -1,0 +1,33 @@
+{
+  "tema": "Do clique ao contrato, etapa 4: a conversa não vira reunião",
+  "pilar": "Por que o digital não vira contrato",
+  "slides": [
+    { "layout": "capa", "cena": { "tipo": "conversa", "contato": "Lead do anúncio", "conversa": [
+        { "de": "lead", "texto": "Entendi, faz sentido. Vou ver aqui e te falo.", "hora": "15:20" },
+        { "de": "escritorio", "texto": "Combinado! Fico no aguardo.", "hora": "15:21" } ] },
+      "textos": { "rotulo": "Do clique ao contrato · etapa 4 de 7",
+        "titulo": "Seu lead respondeu tudo e mesmo assim não marcou *reunião*?",
+        "apoio": "A conversa foi ótima. E terminou em \"te falo\"." } },
+    { "layout": "ponto", "cena": { "tipo": "funil", "etapas": [
+        { "nome": "Responderam", "valor": "100" },
+        { "nome": "Marcaram reunião", "valor": "25", "furo": true } ] },
+      "textos": { "titulo": "Como saber se o furo é *aqui*",
+        "apoio": "De cada 10 que responderam, quantos marcaram reunião? Se a conversa rende e a agenda não enche, o furo é aqui." } },
+    { "layout": "lista", "textos": { "titulo": "Por que a conversa *não vira* reunião",
+        "itens": [ "Convite que chega *tarde* demais", "\"Quando você pode?\" sem *horário*", "Reunião que parece *venda*", "Link da agenda *solto* na conversa", "Quem atende não passa *segurança*" ] } },
+    { "layout": "ponto", "cena": { "tipo": "comparacao",
+        "errado": { "rotulo": "Comum", "texto": "Quando você pode conversar?" },
+        "certo": { "rotulo": "Melhor", "texto": "Pode ser amanhã às 10h ou às 16h?" } },
+      "textos": { "titulo": "Dá *dois horários*, não uma pergunta",
+        "apoio": "Pergunta aberta dá trabalho pra responder. Escolher entre dois é fácil." } },
+    { "layout": "ponto", "cena": { "tipo": "conversa", "contato": "Paulo · lead do anúncio", "conversa": [
+        { "de": "lead", "texto": "Já tá atrasada, uns 3 meses.", "hora": "21:55" },
+        { "de": "escritorio", "texto": "Entendi. Numa conversa de 20 minutos eu olho o contrato com você e te digo o que dá pra fazer no seu caso. Amanhã às 10h ou às 16h?", "hora": "21:56" } ] },
+      "textos": { "titulo": "Convida enquanto está *quente*",
+        "apoio": "Logo depois que ele confirmou o problema, dizendo o que vai acontecer na reunião. Reunião que resolve uma dúvida dele ninguém recusa." } },
+    { "layout": "ponto", "elemento": "cadeado", "textos": { "titulo": "Quem atende tem que passar *segurança*",
+        "apoio": "Se o cliente é um empresário mais velho, quem faz o primeiro contato precisa conversar no nível dele. Às vezes trocar quem atende resolve mais que trocar o anúncio." } },
+    { "layout": "final", "textos": { "titulo": "Etapa 4 de 7. Segue pra ver a *próxima*",
+        "apoio": "Na próxima: a reunião foi marcada, mas o cliente não apareceu." } }
+  ]
+}
