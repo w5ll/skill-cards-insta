@@ -67,9 +67,9 @@ Depois que o Well aprovar a copy slide a slide:
    | `caixinha` | Caixinha de pergunta do Stories sobre uma foto | `titulo`, `pergunta`, `foto`, `posicao` |
    | `comparacao` | Jeito comum riscado x jeito melhor | `errado: {rotulo, texto}`, `certo: {rotulo, texto}` |
    | `funil` | Etapas com número, a do furo em destaque (marcado como exemplo) | `etapas: [{nome, valor, furo}]` |
-   | `foto` | Foto do Well num quadro de celular gravando | `foto`, `posicao`, `rec` |
+   | `foto` | Quadro de celular gravando: com `legenda`, vira vídeo com legenda na tela (sem foto); com `foto`, mostra a foto | `legenda`, `foto`, `posicao`, `rec` |
 
-   Fotos do Well ficam em `assets/fotos/` (`well_rosto.jpg` é o recorte usado no anel da capa e do final).
+   Fotos do Well ficam em `assets/fotos/`, mas ele não aprovou nenhuma ainda: não use até ele mandar fotos novas. Sem foto em `marca.json`, o slide final mostra um cartão de perfil com botão "Seguir".
 
 3. Destaque na cor de destaque com `*palavra*` (uma ou duas palavras por slide, nunca a frase inteira).
 4. Renderize: `node scripts/renderizar.mjs caminho/CARROSSEL.json`. Os PNGs saem ao lado do `.json`, numerados (`_01.png`, `_02.png`...).

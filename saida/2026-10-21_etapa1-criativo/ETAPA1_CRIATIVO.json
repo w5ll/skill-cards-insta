@@ -2,40 +2,151 @@
   "tema": "Do clique ao contrato, etapa 1: o criativo que ninguém preenche",
   "pilar": "Por que o digital não vira contrato",
   "slides": [
-    { "layout": "capa", "cena": { "tipo": "anuncios", "itens": [
-        { "nome": "Mais um escritório", "texto": "Empresário, você tem dívida acima de 100 mil?" },
-        { "nome": "Outro escritório", "texto": "Empresário, você tem dívida acima de 100 mil?" },
-        { "nome": "Seu concorrente", "texto": "Empresário, você tem dívida acima de 100 mil?" } ] },
-      "textos": { "rotulo": "Do clique ao contrato · etapa 1 de 7",
+    {
+      "layout": "capa",
+      "cena": {
+        "tipo": "anuncios",
+        "itens": [
+          {
+            "nome": "Mais um escritório",
+            "texto": "Empresário, você tem dívida acima de 100 mil?"
+          },
+          {
+            "nome": "Outro escritório",
+            "texto": "Empresário, você tem dívida acima de 100 mil?"
+          },
+          {
+            "nome": "Seu concorrente",
+            "texto": "Empresário, você tem dívida acima de 100 mil?"
+          }
+        ]
+      },
+      "textos": {
+        "rotulo": "Do clique ao contrato · etapa 1 de 7",
         "titulo": "Seu cliente já ouviu isso *hoje*",
-        "apoio": "De outro advogado. E de mais outro." } },
-    { "layout": "ponto", "cena": { "tipo": "funil", "etapas": [
-        { "nome": "Viram o anúncio", "valor": "10.000" },
-        { "nome": "Clicaram", "valor": "200" },
-        { "nome": "Preencheram", "valor": "20", "furo": true } ] },
-      "textos": { "titulo": "Como saber se o furo é *aqui*",
-        "apoio": "Muita gente vê e pouca preenche? O anúncio não convenceu. Compara com a semana passada." } },
-    { "layout": "lista", "textos": { "titulo": "Por que ninguém *preenche*",
-        "itens": [ "Todo anúncio do nicho parece *igual*", "Parece *propaganda*, e a pessoa pula", "Fala do advogado, não do *problema*", "Não diz por que *conversar* com você", "A página *não repete* a promessa" ] } },
-    { "layout": "ponto", "cena": { "tipo": "foto", "foto": "assets/fotos/well_img_9153.jpg", "posicao": "72% center" },
-      "textos": { "titulo": "Ninguém entra no Instagram pra ver *anúncio*",
-        "apoio": "Prende o que parece conteúdo: responder uma dúvida, comentar uma notícia, contar um caso. Gravado no celular, como conversa." } },
-    { "layout": "ponto", "cena": { "tipo": "notificacoes", "hora": "9:41", "data": "terça-feira, 21 de outubro", "itens": [
-        { "icone": "✆", "cor": "#4f9d69", "titulo": "Gerente do banco", "texto": "3 chamadas perdidas", "quando": "agora" },
-        { "icone": "✉", "cor": "#6b7fb3", "titulo": "Cartório", "texto": "Aviso de protesto do título", "quando": "8:12" },
-        { "icone": "!", "cor": "#c27c3a", "titulo": "Lembrete", "texto": "Imposto da empresa vence hoje", "quando": "7:00" } ] },
-      "textos": { "titulo": "Fala a língua de quem *deve*",
-        "apoio": "Em vez de \"você que é empresário\", mostra a manhã dele. Quem vive isso se reconhece na hora." } },
-    { "layout": "ponto", "cena": { "tipo": "caixinha", "foto": "assets/fotos/well_img_0441.jpg", "posicao": "60% center", "titulo": "Me pergunta sobre dívida da empresa",
-        "pergunta": "O banco pode bloquear a conta da empresa mesmo sem processo?" },
-      "textos": { "titulo": "Ensina antes de *pedir*",
-        "apoio": "A pessoa sai do vídeo sabendo algo que não sabia. É isso que faz ela confiar antes da primeira mensagem." } },
-    { "layout": "ponto", "cena": { "tipo": "comparacao",
-        "errado": { "rotulo": "Comum", "texto": "Clica aqui e fala com a gente." },
-        "certo": { "rotulo": "Melhor", "texto": "Cada contrato é diferente. Responde três perguntas e eu te digo se vale olhar o seu." } },
-      "textos": { "titulo": "A chamada é o *próximo passo*",
-        "apoio": "Diz o que vai acontecer depois do clique. Sem prometer resultado." } },
-    { "layout": "final", "textos": { "titulo": "Etapa 1 de 7. Segue pra ver a *próxima*",
-        "apoio": "Na próxima: chega muito cadastro, mas é tudo curioso. Onde está o furo?" } }
+        "apoio": "De outro advogado. E de mais outro."
+      }
+    },
+    {
+      "layout": "ponto",
+      "cena": {
+        "tipo": "funil",
+        "etapas": [
+          {
+            "nome": "Viram o anúncio",
+            "valor": "10.000"
+          },
+          {
+            "nome": "Clicaram",
+            "valor": "200"
+          },
+          {
+            "nome": "Preencheram",
+            "valor": "20",
+            "furo": true
+          }
+        ]
+      },
+      "textos": {
+        "titulo": "Como saber se o furo é *aqui*",
+        "apoio": "Muita gente vê e pouca preenche? O anúncio não convenceu. Compara com a semana passada."
+      }
+    },
+    {
+      "layout": "lista",
+      "textos": {
+        "titulo": "Por que ninguém *preenche*",
+        "itens": [
+          "Todo anúncio do nicho parece *igual*",
+          "Parece *propaganda*, e a pessoa pula",
+          "Fala do advogado, não do *problema*",
+          "Não diz por que *conversar* com você",
+          "A página *não repete* a promessa"
+        ]
+      }
+    },
+    {
+      "layout": "ponto",
+      "cena": {
+        "tipo": "foto",
+        "legenda": "Recebi uma pergunta ontem que *todo empresário* devia ouvir."
+      },
+      "textos": {
+        "titulo": "Ninguém entra no Instagram pra ver *anúncio*",
+        "apoio": "Prende o que parece conteúdo: responder uma dúvida, comentar uma notícia, contar um caso. Gravado no celular, como conversa."
+      }
+    },
+    {
+      "layout": "ponto",
+      "cena": {
+        "tipo": "notificacoes",
+        "hora": "9:41",
+        "data": "terça-feira, 21 de outubro",
+        "itens": [
+          {
+            "icone": "✆",
+            "cor": "#4f9d69",
+            "titulo": "Gerente do banco",
+            "texto": "3 chamadas perdidas",
+            "quando": "agora"
+          },
+          {
+            "icone": "✉",
+            "cor": "#6b7fb3",
+            "titulo": "Cartório",
+            "texto": "Aviso de protesto do título",
+            "quando": "8:12"
+          },
+          {
+            "icone": "!",
+            "cor": "#c27c3a",
+            "titulo": "Lembrete",
+            "texto": "Imposto da empresa vence hoje",
+            "quando": "7:00"
+          }
+        ]
+      },
+      "textos": {
+        "titulo": "Fala a língua de quem *deve*",
+        "apoio": "Em vez de \"você que é empresário\", mostra a manhã dele. Quem vive isso se reconhece na hora."
+      }
+    },
+    {
+      "layout": "ponto",
+      "cena": {
+        "tipo": "caixinha",
+        "titulo": "Me pergunta sobre dívida da empresa",
+        "pergunta": "O banco pode bloquear a conta da empresa mesmo sem processo?"
+      },
+      "textos": {
+        "titulo": "Ensina antes de *pedir*",
+        "apoio": "A pessoa sai do vídeo sabendo algo que não sabia. É isso que faz ela confiar antes da primeira mensagem."
+      }
+    },
+    {
+      "layout": "ponto",
+      "cena": {
+        "tipo": "comparacao",
+        "errado": {
+          "rotulo": "Comum",
+          "texto": "Clica aqui e fala com a gente."
+        },
+        "certo": {
+          "rotulo": "Melhor",
+          "texto": "Cada contrato é diferente. Responde três perguntas e eu te digo se vale olhar o seu."
+        }
+      },
+      "textos": {
+        "titulo": "A chamada é o *próximo passo*",
+        "apoio": "Diz o que vai acontecer depois do clique. Sem prometer resultado."
+      }
+    },
+    {
+      "layout": "final",
+      "textos": {
+        "titulo": "Etapa 1 de 7. Segue pra ver a *próxima*",
+        "apoio": "Na próxima: chega muito cadastro, mas é tudo curioso. Onde está o furo?"
+      }
+    }
   ]
 }

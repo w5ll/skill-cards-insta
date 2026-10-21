@@ -149,6 +149,24 @@
   .gravando img { width: 100%; height: 100%; object-fit: cover; }
   .gravando .rec { position: absolute; top: 26px; left: 26px; display: flex; align-items: center; gap: 10px; background: rgba(0,0,0,.55); color: #fff; font-weight: 700; font-size: 24px; padding: 8px 18px; border-radius: 999px; }
   .gravando .rec i { width: 16px; height: 16px; border-radius: 50%; background: #e5484d; }
+
+  /* Vídeo com legenda (sem foto) */
+  .gravando.sem-foto { background: radial-gradient(90% 60% at 50% 30%, #3a4462 0%, #1a1d2b 60%, #0d0e15 100%); display: flex; align-items: flex-end; justify-content: center; padding: 0 34px 90px; }
+  .gravando .leg { background: rgba(0,0,0,.7); color: #fff; font-family: var(--f-titulo), sans-serif; font-weight: 700; font-size: 34px; line-height: 1.25; text-align: center; padding: 14px 20px; border-radius: 14px; }
+  .gravando .leg em { font-style: normal; color: #ffd84d; }
+  .gravando .barra { position: absolute; left: 34px; right: 34px; bottom: 40px; height: 6px; border-radius: 3px; background: rgba(255,255,255,.25); }
+  .gravando .barra::after { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 38%; border-radius: 3px; background: #fff; }
+  .story.sem-foto { background: radial-gradient(90% 60% at 30% 20%, #4a5578 0%, #22263a 60%, #11131c 100%); }
+
+  /* Cartão de perfil (final sem foto) */
+  .perfil { width: 760px; background: var(--cartao); border: 2px solid var(--linha); border-radius: 36px; padding: 40px; display: flex; flex-direction: column; gap: 26px; box-shadow: 0 30px 60px rgba(0,0,0,.45); }
+  .perfil .linha1 { display: flex; align-items: center; gap: 28px; }
+  .perfil .av { flex: none; width: 150px; height: 150px; border-radius: 50%; display: grid; place-items: center; font-family: var(--f-titulo), sans-serif; font-weight: 800; font-size: 64px; color: var(--fundo-profundo);
+    background: radial-gradient(circle at 35% 30%, #f2f5fb 0%, var(--elemento) 60%, #3b4256 100%); box-shadow: 0 0 0 6px var(--cartao), 0 0 0 10px var(--destaque); }
+  .perfil .nome b { display: block; font-family: var(--f-titulo), sans-serif; font-weight: 800; font-size: 40px; color: var(--texto); }
+  .perfil .nome span { font-size: 28px; color: var(--apoio); }
+  .perfil .bio { font-size: 28px; line-height: 1.35; color: var(--apoio); }
+  .perfil .seguir { text-align: center; font-weight: 800; font-size: 30px; color: var(--fundo-profundo); background: var(--destaque); border-radius: 18px; padding: 20px; }
 </style>
 </head>
 <body>
@@ -254,7 +272,7 @@ const CENAS = {
       <div class="txt">${fmt(a.texto)}</div><div class="cta"><span>${esc(a.botao || 'Saiba mais')}</span><span>›</span></div></div>`).join('')}</div>`,
   notificacoes: c => `<div class="celular"><div class="hora">${esc(c.hora || '9:41')}</div><div class="data">${esc(c.data || '')}</div>
       ${(c.itens || []).map(n => `<div class="notif" style="--ic:${esc(n.cor || '#7f8caa')}"><i>${esc(n.icone || '•')}</i><div><b>${esc(n.titulo)}<span>${esc(n.quando || 'agora')}</span></b>${fmt(n.texto)}</div></div>`).join('')}</div>`,
-  caixinha: c => `<div class="story">${c.foto ? `<img src="${esc(c.foto)}" style="object-position:${esc(c.posicao || 'center')}" alt="">` : ''}<div class="caixa"><div class="topo-cx">${esc(c.titulo || 'Me pergunta')}</div><div class="perg">${fmt(c.pergunta)}</div></div></div>`,
+  caixinha: c => `<div class="story${c.foto ? '' : ' sem-foto'}">${c.foto ? `<img src="${esc(c.foto)}" style="object-position:${esc(c.posicao || 'center')}" alt="">` : ''}<div class="caixa"><div class="topo-cx">${esc(c.titulo || 'Me pergunta')}</div><div class="perg">${fmt(c.pergunta)}</div></div></div>`,
   comparacao: c => `<div class="compara">
       <div class="lado-c errado"><small><i>✕</i>${esc(c.errado?.rotulo || 'Comum')}</small><p>${fmt(c.errado?.texto)}</p></div>
       <div class="lado-c certo"><small><i>✓</i>${esc(c.certo?.rotulo || 'Melhor')}</small><p>${fmt(c.certo?.texto)}</p></div></div>`,
@@ -263,7 +281,7 @@ const CENAS = {
     return `${c.exemplo !== false ? `<span class="exemplo exemplo-cena">${esc(c.exemplo || 'Exemplo, números redondos')}</span>` : ''}<div class="funil-n">${(c.etapas || []).map((e, i) =>
       `<div class="etapa-n${e.furo ? ' furo-n' : ''}" style="width:${100 - i * (40 / Math.max(n - 1, 1))}%"><span>${fmt(e.nome)}</span><b>${esc(e.valor)}</b></div>`).join('')}</div>`;
   },
-  foto: c => `<div class="gravando">${c.foto ? `<img src="${esc(c.foto)}" style="object-position:${esc(c.posicao || 'center')}" alt="">` : ''}${c.rec !== false ? `<span class="rec"><i></i>${esc(c.rec || 'REC')}</span>` : ''}</div>`,
+  foto: c => `<div class="gravando${c.foto ? '' : ' sem-foto'}">${c.foto ? `<img src="${esc(c.foto)}" style="object-position:${esc(c.posicao || 'center')}" alt="">` : ''}${c.rec !== false ? `<span class="rec"><i></i>${esc(c.rec || 'REC')}</span>` : ''}${c.legenda ? `<div class="leg">${fmt(c.legenda)}</div><div class="barra"></div>` : ''}</div>`,
 };
 const cena = c => `<div class="cena">${(CENAS[c.tipo] || (() => ''))(c)}</div>`;
 /* ---------- Monta o slide ---------- */
@@ -291,7 +309,9 @@ if (lay === 'capa') {
 } else if (lay === 'numero') {
   meio = `${T.exemplo !== false ? `<span class="exemplo">${esc(T.exemplo || 'Exemplo, números redondos')}</span>` : ''}<div class="numero">${esc(T.numero)}</div>${T.numero_legenda ? `<div class="numero-legenda">${fmt(T.numero_legenda)}</div>` : ''}`;
 } else if (lay === 'final') {
-  meio = retrato() + `<div class="arroba">${esc(M.arroba)}</div>`;
+  meio = M.foto ? retrato() + `<div class="arroba">${esc(M.arroba)}</div>`
+    : `<div class="perfil"><div class="linha1"><div class="av">${esc((M.nome || 'W').trim()[0])}</div><div class="nome"><b>${esc(M.arroba)}</b><span>${esc(M.nome)}</span></div></div>
+       <div class="bio">${esc(M.bio || 'Eu mostro onde o seu escritório perde cliente entre o anúncio e o contrato.')}</div><div class="seguir">Seguir</div></div>`;
   base = titulo + apoio;
 }
 
