@@ -116,7 +116,9 @@
       "cena": {
         "tipo": "caixinha",
         "titulo": "Me pergunta sobre dívida da empresa",
-        "pergunta": "O banco pode bloquear a conta da empresa mesmo sem processo?"
+        "pergunta": "O banco pode bloquear a conta da empresa mesmo sem processo?",
+        "foto": "assets/fotos/well_img_0441.jpg",
+        "posicao": "60% center"
       },
       "textos": {
         "titulo": "Ensina antes de *pedir*",
