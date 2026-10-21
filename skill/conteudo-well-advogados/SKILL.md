@@ -52,7 +52,7 @@ Depois que o Well aprovar a copy slide a slide:
    | --- | --- |
    | `capa` | Slide 1: gancho grande, linha de apoio, foto do Well no anel 3D (opcional) |
    | `ponto` | Um ponto por slide: elemento 3D no meio, título e apoio embaixo |
-   | `lista` | Slide com 3 a 5 itens curtos |
+   | `lista` | Slide com 3 a 5 itens curtos. Lista maior vira dois slides: no segundo, use `"inicio": 5` nos textos pra numeração continuar |
    | `conversa` | Cena de WhatsApp (lead x escritório) com horário |
    | `numero` | Um número grande (sempre genérico ou arredondado, marcado como exemplo) |
    | `final` | Chamada pra ação + foto do Well + @lunardiwell |

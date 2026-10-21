@@ -207,7 +207,7 @@ if (lay === 'capa') {
 } else if (lay === 'ponto') {
   meio = el3d(D.elemento);
 } else if (lay === 'lista') {
-  meio = titulo + (T.itens || []).map((t, i) => `<div class="item"><span class="n">${i + 1}</span><span>${fmt(t)}</span></div>`).join('');
+  meio = titulo + (T.itens || []).map((t, i) => `<div class="item"><span class="n">${i + (T.inicio || 1)}</span><span>${fmt(t)}</span></div>`).join('');
   base = apoio;
 } else if (lay === 'conversa') {
   const bal = (T.conversa || []).map(b => b.pausa ? `<div class="pausa">${esc(b.pausa)}</div>`

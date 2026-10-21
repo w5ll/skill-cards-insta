@@ -1,0 +1,87 @@
+{
+  "tema": "Do clique ao contrato: as 7 etapas do funil (abertura da série)",
+  "pilar": "Por que o digital não vira contrato",
+  "slides": [
+    {
+      "layout": "capa",
+      "foto": false,
+      "elemento": "funil",
+      "textos": {
+        "rotulo": "Do clique ao contrato",
+        "titulo": "Você sabe em que *etapa* o seu escritório perde cliente?",
+        "apoio": "Quase todo mundo só olha a primeira: o anúncio."
+      }
+    },
+    {
+      "layout": "ponto",
+      "elemento": "lupa",
+      "textos": {
+        "titulo": "Todo mundo olha a *ponta*",
+        "apoio": "O advogado olha o custo do anúncio no começo do mês e os contratos no fim. O que acontece no meio ninguém mede. É ali que o cliente some."
+      }
+    },
+    {
+      "layout": "lista",
+      "textos": {
+        "titulo": "Do clique à *conversa*",
+        "itens": [
+          "Clicou e *preencheu*",
+          "Preencheu e *tinha caso*",
+          "Tinha caso e *respondeu*",
+          "Respondeu e *marcou reunião*"
+        ]
+      }
+    },
+    {
+      "layout": "lista",
+      "textos": {
+        "titulo": "Da reunião ao *contrato*",
+        "inicio": 5,
+        "itens": [
+          "Marcou e *apareceu*",
+          "Apareceu e *recebeu proposta*",
+          "Recebeu proposta e *fechou*"
+        ]
+      }
+    },
+    {
+      "layout": "ponto",
+      "elemento": "grafico",
+      "textos": {
+        "titulo": "Cada passagem tem uma *taxa*",
+        "apoio": "É só dividir. De cada 10 que tinham caso, quantos responderam? De cada 10 que marcaram, quantos apareceram? Esse número mostra onde o seu funil vaza."
+      }
+    },
+    {
+      "layout": "ponto",
+      "elemento": "cubo",
+      "textos": {
+        "titulo": "Não tem painel? Começa na *planilha*",
+        "apoio": "Uma linha por semana, uma coluna por etapa. Conta quantos passaram em cada uma. Em um mês você já sabe onde está o furo."
+      }
+    },
+    {
+      "layout": "numero",
+      "textos": {
+        "numero": "15 de 100",
+        "numero_legenda": "leads com caso chegaram até a reunião",
+        "titulo": "Quem perdeu os outros 85 não foi o *anúncio*"
+      }
+    },
+    {
+      "layout": "ponto",
+      "elemento": "furo",
+      "textos": {
+        "titulo": "Cada furo tem um *conserto* diferente",
+        "apoio": "Lead sem perfil se resolve no criativo. Lead que não responde, na velocidade. Reunião vazia, no lembrete. Trocar de agência não conserta nenhum deles."
+      }
+    },
+    {
+      "layout": "final",
+      "textos": {
+        "titulo": "Segue pra ver *cada etapa*",
+        "apoio": "A partir de hoje, um post por etapa: como saber se o furo está ali e o que fazer. Salva este pra usar de mapa."
+      }
+    }
+  ]
+}
