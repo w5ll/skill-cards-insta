@@ -1,0 +1,15 @@
+# 2026-10-21_etapa3-resposta
+- Formato: carrossel (8 slides)
+- Pilar: Por que o digital não vira contrato
+- Série: Do clique ao contrato, etapa 3 (lead qualificado → respondeu)
+- Gancho usado: "Lead com caso que some não sumiu. Foi atendido por outro."
+- Cenas: conversa de WhatsApp, funil com números, errado x certo, conversa, notificações, relógio 3D, cartão de perfil
+- Link: https://www.instagram.com/p/DexJq7Amk61/
+- Arquivos: saida/2026-10-21_etapa3-resposta/
+- Alcance:
+- Salvamentos:
+- Compartilhamentos:
+- Comentários:
+- Seguidores ganhos:
+- Por que funcionou / por que não funcionou:
+- Comentários que viraram pauta: (a legenda pergunta: Quanto tempo o escritório leva pra responder um lead)

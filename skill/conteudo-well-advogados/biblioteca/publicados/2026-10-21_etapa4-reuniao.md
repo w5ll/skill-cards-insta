@@ -1,0 +1,15 @@
+# 2026-10-21_etapa4-reuniao
+- Formato: carrossel (7 slides)
+- Pilar: Por que o digital não vira contrato
+- Série: Do clique ao contrato, etapa 4 (respondeu → reunião marcada)
+- Gancho usado: "Seu lead respondeu tudo e mesmo assim não marcou reunião?"
+- Cenas: conversa de WhatsApp, funil com números, errado x certo, conversa, cadeado 3D, cartão de perfil
+- Link: https://www.instagram.com/p/DexJvyQiQLr/
+- Arquivos: saida/2026-10-21_etapa4-reuniao/
+- Alcance:
+- Salvamentos:
+- Compartilhamentos:
+- Comentários:
+- Seguidores ganhos:
+- Por que funcionou / por que não funcionou:
+- Comentários que viraram pauta: (a legenda pergunta: Quem faz o convite pra reunião no escritório)
