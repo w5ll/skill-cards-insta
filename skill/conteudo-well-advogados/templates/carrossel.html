@@ -163,6 +163,8 @@
   .perfil .linha1 { display: flex; align-items: center; gap: 28px; }
   .perfil .av { flex: none; width: 150px; height: 150px; border-radius: 50%; display: grid; place-items: center; font-family: var(--f-titulo), sans-serif; font-weight: 800; font-size: 64px; color: var(--fundo-profundo);
     background: radial-gradient(circle at 35% 30%, #f2f5fb 0%, var(--elemento) 60%, #3b4256 100%); box-shadow: 0 0 0 6px var(--cartao), 0 0 0 10px var(--destaque); }
+  .perfil .av.com-foto { overflow: hidden; background: var(--cartao); }
+  .perfil .av.com-foto img { width: 100%; height: 100%; object-fit: cover; }
   .perfil .nome b { display: block; font-family: var(--f-titulo), sans-serif; font-weight: 800; font-size: 40px; color: var(--texto); }
   .perfil .nome span { font-size: 28px; color: var(--apoio); }
   .perfil .bio { font-size: 28px; line-height: 1.35; color: var(--apoio); }
@@ -309,8 +311,9 @@ if (lay === 'capa') {
 } else if (lay === 'numero') {
   meio = `${T.exemplo !== false ? `<span class="exemplo">${esc(T.exemplo || 'Exemplo, números redondos')}</span>` : ''}<div class="numero">${esc(T.numero)}</div>${T.numero_legenda ? `<div class="numero-legenda">${fmt(T.numero_legenda)}</div>` : ''}`;
 } else if (lay === 'final') {
-  meio = M.foto ? retrato() + `<div class="arroba">${esc(M.arroba)}</div>`
-    : `<div class="perfil"><div class="linha1"><div class="av">${esc((M.nome || 'W').trim()[0])}</div><div class="nome"><b>${esc(M.arroba)}</b><span>${esc(M.nome)}</span></div></div>
+  // Final: cartão do perfil, com a foto de perfil do Well no avatar (ou a inicial, se não tiver foto).
+  const av = M.foto ? `<div class="av com-foto"><img src="${esc(M.foto)}" alt=""></div>` : `<div class="av">${esc((M.nome || 'W').trim()[0])}</div>`;
+  meio = `<div class="perfil"><div class="linha1">${av}<div class="nome"><b>${esc(M.arroba)}</b><span>${esc(M.nome)}</span></div></div>
        <div class="bio">${esc(M.bio || 'Eu mostro onde o seu escritório perde cliente entre o anúncio e o contrato.')}</div><div class="seguir">Seguir</div></div>`;
   base = titulo + apoio;
 }

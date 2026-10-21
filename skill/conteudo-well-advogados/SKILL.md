@@ -69,7 +69,7 @@ Depois que o Well aprovar a copy slide a slide:
    | `funil` | Etapas com número, a do furo em destaque (marcado como exemplo) | `etapas: [{nome, valor, furo}]` |
    | `foto` | Quadro de celular gravando: com `legenda`, vira vídeo com legenda na tela (sem foto); com `foto`, mostra a foto | `legenda`, `foto`, `posicao`, `rec` |
 
-   Fotos do Well ficam em `assets/fotos/`, mas ele não aprovou nenhuma ainda: não use até ele mandar fotos novas. Sem foto em `marca.json`, o slide final mostra um cartão de perfil com botão "Seguir".
+   Fotos do Well ficam em `assets/fotos/`. A única aprovada é a foto de perfil (`well_perfil.jpg`, recorte `well_perfil_rosto.jpg`), usada no avatar do cartão de perfil do slide final. As outras fotos da pasta não foram aprovadas: não use até ele mandar fotos novas.
 
 3. Destaque na cor de destaque com `*palavra*` (uma ou duas palavras por slide, nunca a frase inteira).
 4. Renderize: `node scripts/renderizar.mjs caminho/CARROSSEL.json`. Os PNGs saem ao lado do `.json`, numerados (`_01.png`, `_02.png`...).
