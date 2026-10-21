@@ -1,0 +1,15 @@
+# 2026-10-21_etapa1-criativo
+- Formato: carrossel (8 slides)
+- Pilar: Por que o digital não vira contrato
+- Série: Do clique ao contrato, etapa 1 (clique → cadastro, foco no criativo)
+- Gancho usado: anúncios iguais na capa ("Empresário, você tem dívida acima de 100 mil?") + "Seu cliente já ouviu isso hoje"
+- Novidade visual: primeiro carrossel com cenas no lugar do 3D (anúncios, funil com números, vídeo com legenda, notificações, caixinha, errado x certo) e foto de perfil no final
+- Link: https://www.instagram.com/p/Dew0AJTkRAQ/
+- Arquivos: saida/2026-10-21_etapa1-criativo/
+- Alcance:
+- Salvamentos:
+- Compartilhamentos:
+- Comentários:
+- Seguidores ganhos:
+- Por que funcionou / por que não funcionou: (comparar com o post 0, que usou só elementos 3D)
+- Comentários que viraram pauta:
